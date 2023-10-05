@@ -191,10 +191,10 @@ def getElementArray(streamer, type):
 
 def parsePage(html, info_list, uid_list):
     try:
-        name = re.findall(r'\"uname\"\:\".*?\"', html)
-        title = re.findall(r'\"title\"\:\".*?\"', html)
-        uid = re.findall(r'\"uid\"\:\d*', html)
-        roomid = re.findall(r'\"roomid\"\:\d*', html)
+        name = re.findall(r'\"uname\":\".*?\"', html)
+        title = re.findall(r'\"title\":\".*?\"', html)
+        uid = re.findall(r'\"uid\":\d*', html)
+        roomid = re.findall(r'\"roomid\":\d*', html)
         for i in range(len(name)):
             uid_str = eval(uid[i].split(':')[1])
             if uid_str in uid_list:
@@ -210,7 +210,7 @@ def isRoomIdStream(streamer, live_streamer_list, replay_streamer_list):
     url = "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo?room_id=" + str(
         streamer.roomid) + "&protocol=0,1&format=0,1,2&codec=0,1&qn=0&platform=web&ptype=8&dolby=5&panorama=1"
     html = getHTMLList(url)
-    islive = re.findall(r'\"live_status\"\:\d*', html)
+    islive = re.findall(r'\"live_status\":\d*', html)
     islive_str = islive[0][-1]
     if islive_str == "1":
         live_streamer_list.append([streamer.name, "", streamer.uid, streamer.roomid])
