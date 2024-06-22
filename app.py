@@ -9,7 +9,7 @@ from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QTableWidgetItem, QTable
 from functools import partial
 
 
-kv = {'user-agent': 'Mozilla/5.0'}
+kv = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0','Origin':'https://live.bilibili.com'}
 
 
 class NVRWindow(QMainWindow):
@@ -106,13 +106,6 @@ class NVREvaluate:
             asyncio.run(parseList(LiveList, HTMLList))
 
 
-async def parseURL(url, LiveList):
-    html = getHTMLList(url)
-    if 0 < len(html) < 100:
-        return None
-    parsePage(html, LiveList, UidList)
-
-
 def generateHTMLList(areaList, depth):
     list = ["bilibili"]
     for i in areaList:
@@ -205,7 +198,7 @@ def isRoomIdStream(streamer, live_streamer_list, replay_streamer_list):
 
 
 class Crawler:
-    def __init__(self, client, urls, uidlist, lList, workers=10, limit=25, delay=0.1):
+    def __init__(self, client, urls, uidlist, lList, workers=1, limit=25, delay=1):
         self.client = client
         self.UidList = uidlist
         self.delay = delay
@@ -271,18 +264,7 @@ def parseText(text, uid_list, info_list):
     html = text.split("\"list\"")[1]
     if 0 < len(html) < 100:
         return
-    name = re.findall(r'\"uname\":\".*?\"', html)
-    title = re.findall(r'\"title\":\".*?\"', html)
-    uid = re.findall(r'\"uid\":\d*', html)
-    roomid = re.findall(r'\"roomid\":\d*', html)
-    for i in range(len(name)):
-        uid_str = uid[i].split(':')[1]
-        if uid_str in uid_list:
-            name_str = eval(name[i].split(':')[1])
-            title_str = eval(title[i].split(':')[1])
-            roomid_str = eval(roomid[i].split(':')[1])
-            info_list.append([name_str, title_str, uid_str, roomid_str])
-
+    parsePage(html,uid_list,info_list)
 
 import httpx
 

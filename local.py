@@ -18,7 +18,7 @@ if __name__ == "__main__":
                 isRoomIdStream(StreamerList[jj], lList, rList)
             except:
                 print("")
-    elif TYPE == "1.1":
+    elif TYPE == "1":
         liList = []
         asyncio.run(parseList(liList,generateHTMLList([5, 9], 200)))
         for ji in liList:
