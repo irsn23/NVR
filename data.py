@@ -106,6 +106,9 @@ NameList = [
     "雪烛Yukisyo",
     "阿命Inochi",
     "鬼间Kima",
+    "花礼Harei",
+    "点酥Susu",
+    "桃代Momoka",
     "樱樱火Official",
     "菜菜子Nanako",
     "祖娅纳惜",
@@ -203,6 +206,9 @@ UidList = [
     "2039332008",
     "1526446007",
     "1570525137",
+    "1048135385",
+    "1323355750",
+    "2040984069",
     "425642",
     "595407557",
     "3046429",
@@ -300,6 +306,9 @@ RoomidList = [
     "31368697",
     "32638818",
     "32638817",
+    "1820703922",
+    "1766907940",
+    "1766909591",
     "11367",
     "22359795",
     "938957",
@@ -396,6 +405,9 @@ StreamerList = [Streamer("艾因Eine", 421267475, 21403601),
                 Streamer("雪烛Yukisyo", 2039332008, 31368697),
                 Streamer("阿命Inochi", 1526446007, 32638818),
                 Streamer("鬼间Kima", 1570525137, 32638817),
+                Streamer("花礼Harei", 1048135385, 1820703922),
+                Streamer("点酥Susu", 1323355750, 1766907940),
+                Streamer("桃代Momoka", 2040984069, 1766909591),
                 Streamer("樱樱火Official", 425642, 11367),
                 Streamer("菜菜子Nanako", 595407557, 22359795),
                 Streamer("祖娅纳惜", 3046429, 938957),
@@ -414,6 +426,6 @@ StreamerList = [Streamer("艾因Eine", 421267475, 21403601),
 # https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=9&area_id=0&sort_type=sort_type_291&page=1
 # https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=9&area_id=0&sort_type=sort_type_291&page=1
 if __name__ == "__main__":
-    getPrintInfo(getName(StreamerList),"Name")
-    getPrintInfo(getUid(StreamerList),"Uid")
-    getPrintInfo(getRoomid(StreamerList),"Roomid")
+    getPrintInfo(getName(StreamerList), "Name")
+    getPrintInfo(getUid(StreamerList), "Uid")
+    getPrintInfo(getRoomid(StreamerList), "Roomid")
