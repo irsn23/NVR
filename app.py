@@ -7,6 +7,7 @@ from PyQt6.QtGui import QDesktopServices,QIcon
 from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QTableWidgetItem, QTableWidget, QComboBox, QLineEdit,
                              QMainWindow, QPushButton, QVBoxLayout, QWidget, QStyledItemDelegate)
 from functools import partial
+import datetime
 
 kv = {'user-agent': 'Mozilla/5.0'}
 
@@ -143,22 +144,21 @@ class NVRCore:
         for ll in lList1:
             if ll not in lList:
                 lList.append(ll)
-        if len(lList) != 0:
-            table = self._view.table
-            table.clearContents()
-            table.setColumnCount(5)
-            hyperlink_delagate = HyperlinkDelegate(table)
-            table.setItemDelegateForColumn(4, hyperlink_delagate)
-            table.setRowCount(len(lList))
-            table.setHorizontalHeaderLabels(["名字", "标题", "UID", "直播间号", "直播间地址"])
-            hyperlink = "https://live.bilibili.com/"
-            for row in range(len(lList)):
-                for col in range(4):
-                    item = QTableWidgetItem(str(lList[row][col]))
-                    item.setFlags(item.flags() and ~Qt.ItemFlag.ItemIsEditable)
-                    table.setItem(row, col, item)
-                table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
-        button.setText("生成完成，点击可以进行下一次生成")
+        table = self._view.table
+        table.clearContents()
+        table.setColumnCount(5)
+        hyperlink_delagate = HyperlinkDelegate(table)
+        table.setItemDelegateForColumn(4, hyperlink_delagate)
+        table.setRowCount(len(lList))
+        table.setHorizontalHeaderLabels(["名字", "标题", "UID", "直播间号", "直播间地址"])
+        hyperlink = "https://live.bilibili.com/"
+        for row in range(len(lList)):
+            for col in range(4):
+                item = QTableWidgetItem(str(lList[row][col]))
+                item.setFlags(item.flags() and ~Qt.ItemFlag.ItemIsEditable)
+                table.setItem(row, col, item)
+            table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
+        button.setText("于 "+datetime.datetime.now().time().strftime("%H:%M:%S")+" 生成完成，点击可以进行下一次生成")
 
     def _connectButtonAndSlots(self):
         self._view.button.clicked.connect(partial(self.DisplayTable, self._view.button))

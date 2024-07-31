@@ -422,6 +422,7 @@ StreamerList = [Streamer("艾因Eine", 421267475, 21403601),
                 Streamer("糯依Noi", 176836079, 6068126),
                 Streamer("诺莺Nox", 529249, 282208),
                 ]
+import datetime
 
 # https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=9&area_id=0&sort_type=sort_type_291&page=1
 # https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=9&area_id=0&sort_type=sort_type_291&page=1
