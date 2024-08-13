@@ -54,7 +54,7 @@ class NVRWindow(QMainWindow):
     def _getParams(self):
         type = self.upperCorner["type"].currentText()
         if type not in ["1.1", "1.2", "2", "3"]:
-            type = "1.1"
+            type = "2"
         depth = self.upperCorner["depth"].text()
         if len(depth) == 0:
             return type, 50
@@ -131,10 +131,12 @@ class NVRCore:
         self._connectButtonAndSlots()
 
     def DisplayTable(self, button):
+        type, depth = self._view._getParams()
         if hasattr(self, '_core'):
             core = self._core
+            core.setType(type)
+            core.setDepth(depth)
         else:
-            type, depth = self._view._getParams()
             self._core = NVREvaluate(StreamerList, type, depth)
             core = self._core
         lList1 = []
