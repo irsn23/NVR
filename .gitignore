@@ -4,3 +4,4 @@ app.spec
 NVR.spec
 /.idea/.name
 .pyc
+__pycache__/
