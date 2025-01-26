@@ -2,3 +2,4 @@ build/
 dist/
 app.spec
 NVR.spec
+/.idea/.name
