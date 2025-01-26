@@ -1,13 +1,14 @@
 import requests
 import re
-from data import StreamerList, UidList
+import time
+import asyncio
+from data import StreamerList, UidList, AreaId
 import sys
 from PyQt6.QtCore import Qt, QUrl
 from PyQt6.QtGui import QDesktopServices, QIcon
 from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QTableWidgetItem, QTableWidget, QComboBox, QLineEdit,
                              QMainWindow, QPushButton, QVBoxLayout, QWidget, QStyledItemDelegate)
 from functools import partial
-
 
 kv = {'user-agent': 'Mozilla/5.0'}
 
@@ -29,8 +30,9 @@ class NVRWindow(QMainWindow):
         layout = QHBoxLayout()
         self.upperCorner = {"type": QComboBox(), "depth": QLineEdit()}
         self.upperCorner["type"].addItem("请选择类型")
-        self.upperCorner["type"].addItem("1")
-        self.upperCorner["type"].addItem("2")
+        self.upperCorner["type"].addItem("并行")
+        self.upperCorner["type"].addItem("串行")
+        self.upperCorner["type"].addItem("穷举")
         layout.addWidget(self.upperCorner["type"])
         layout.addWidget(self.upperCorner["depth"])
         self.generalLayout.addLayout(layout)
@@ -51,8 +53,8 @@ class NVRWindow(QMainWindow):
 
     def _getParams(self):
         type = self.upperCorner["type"].currentText()
-        if type not in ["1", "2"]:
-            type = "1"
+        if type not in ["并行", "串行", "穷举"]:
+            type = "并行"
         depth = self.upperCorner["depth"].text()
         if len(depth) == 0:
             return type, 200
@@ -76,14 +78,12 @@ class HyperlinkDelegate(QStyledItemDelegate):
         return super().editorEvent(event, model, option, index)
 
 
-import asyncio
-
-
 class NVREvaluate:
     def __init__(self, StreamerList, Type, Depth):
         self.StreamerList = StreamerList
         self.Type = Type
         self.Depth = Depth
+        self.AreaId = AreaId
 
     def setStreamerList(self, index):
         self.StreamerList = StreamerList[index]
@@ -95,15 +95,28 @@ class NVREvaluate:
         self.Depth = Depth
 
     def generateInfoList(self, LiveList, ReplayList):
-        if self.Type == "2":
+        areaList = self.AreaId
+        if self.Type == "并行":
+            HTMLList = generateHTMLList(areaList, self.Depth)
+            asyncio.run(parseList(LiveList, HTMLList))
+        elif self.Type == "穷举":
             for streamer in self.StreamerList:
                 try:
                     isRoomIdStream(streamer, LiveList, ReplayList)
                 except:
                     return "ERROR"
         else:
-            HTMLList = generateHTMLList([5, 9], self.Depth)
-            asyncio.run(parseList(LiveList, HTMLList))
+            HTMLList = generateHTMLList(areaList, self.Depth)
+            for ind in range(len(areaList)):
+                j = 0
+                while True:
+                    url = HTMLList[j + ind * self.Depth]
+                    html = getHTMLList(url)
+                    if 0 < len(html) < 100:
+                        break
+                    else:
+                        j += 1
+                    parsePage(html, LiveList, UidList)
 
 
 async def parseURL(url, LiveList):
@@ -116,10 +129,16 @@ async def parseURL(url, LiveList):
 def generateHTMLList(areaList, depth):
     list = ["bilibili"]
     for i in areaList:
-        for j in range(1, depth + 1):
+        for j in range(1, depth):
             list.append(
                 f'https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id={i}&area_id=0&sort_type=sort_type_291&page={j}')
     return list
+
+
+def getCurrentTime():
+    timestamp = time.time()
+    local_time = time.localtime(timestamp)
+    return time.strftime("%H:%M:%S", local_time)
 
 
 class NVRCore:
@@ -141,22 +160,21 @@ class NVRCore:
         for ll in lList1:
             if ll not in lList:
                 lList.append(ll)
-        if len(lList) != 0:
-            table = self._view.table
-            table.clearContents()
-            table.setColumnCount(5)
-            hyperlink_delagate = HyperlinkDelegate(table)
-            table.setItemDelegateForColumn(4, hyperlink_delagate)
-            table.setRowCount(len(lList))
-            table.setHorizontalHeaderLabels(["名字", "标题", "UID", "直播间号", "直播间地址"])
-            hyperlink = "https://live.bilibili.com/"
-            for row in range(len(lList)):
-                for col in range(4):
-                    item = QTableWidgetItem(str(lList[row][col]))
-                    item.setFlags(item.flags() and ~Qt.ItemFlag.ItemIsEditable)
-                    table.setItem(row, col, item)
-                table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
-        button.setText("生成完成，点击可以进行下一次生成")
+        table = self._view.table
+        table.clearContents()
+        table.setColumnCount(5)
+        hyperlink_delagate = HyperlinkDelegate(table)
+        table.setItemDelegateForColumn(4, hyperlink_delagate)
+        table.setRowCount(len(lList))
+        table.setHorizontalHeaderLabels(["名字", "标题", "UID", "直播间号", "直播间地址"])
+        hyperlink = "https://live.bilibili.com/"
+        for row in range(len(lList)):
+            for col in range(4):
+                item = QTableWidgetItem(str(lList[row][col]))
+                item.setFlags(item.flags() and ~Qt.ItemFlag.ItemIsEditable)
+                table.setItem(row, col, item)
+            table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
+        button.setText(f"于 {getCurrentTime()} 生成完成，点击可以进行下一次生成")
 
     def _connectButtonAndSlots(self):
         self._view.button.clicked.connect(partial(self.DisplayTable, self._view.button))
