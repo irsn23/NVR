@@ -5,3 +5,5 @@ NVR.spec
 /.idea/.name
 .pyc
 __pycache__/
+!dist/app.exe
+/_internal
