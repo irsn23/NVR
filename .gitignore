@@ -1,2 +1,4 @@
-.pyc
-.xml
+build/
+dist/
+app.spec
+NVR.spec
