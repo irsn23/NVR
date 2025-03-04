@@ -2,12 +2,14 @@ import requests
 import re
 import time
 import asyncio
-from data import StreamerList, UidList, AreaId
+import httpx
 import sys
+from data import StreamerList, UidList, AreaId
 from PyQt6.QtCore import Qt, QUrl
 from PyQt6.QtGui import QDesktopServices, QIcon
 from PyQt6.QtWidgets import (QApplication, QHBoxLayout, QTableWidgetItem, QTableWidget, QComboBox, QLineEdit,
                              QMainWindow, QPushButton, QVBoxLayout, QWidget, QStyledItemDelegate)
+from PyQt6.QtCore import QThread, pyqtSignal
 from functools import partial
 
 kv = {'user-agent': 'Mozilla/5.0'}
@@ -140,8 +142,6 @@ def getCurrentTime():
     local_time = time.localtime(timestamp)
     return time.strftime("%H:%M:%S", local_time)
 
-
-from PyQt6.QtCore import QThread, pyqtSignal
 
 class WorkerThread(QThread):
     data_ready = pyqtSignal(list, list)
@@ -328,9 +328,6 @@ def parseText(text, uid_list, info_list):
             title_str = eval(title[i].split(':')[1])
             roomid_str = eval(roomid[i].split(':')[1])
             info_list.append([name_str, title_str, uid_str, roomid_str])
-
-
-import httpx
 
 
 async def parseList(lList, urls):
