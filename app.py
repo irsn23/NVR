@@ -144,7 +144,6 @@ def getCurrentTime():
 from PyQt6.QtCore import QThread, pyqtSignal
 
 class WorkerThread(QThread):
-    # 定义信号用于传递生成的数据
     data_ready = pyqtSignal(list, list)
     finished = pyqtSignal()
 
@@ -155,9 +154,7 @@ class WorkerThread(QThread):
         self.rList = []
 
     def run(self):
-        # 执行耗时操作
         self.core.generateInfoList(self.lList1, self.rList)
-        # 发送生成的数据
         self.data_ready.emit(self.lList1, self.rList)
         self.finished.emit()
 
@@ -169,7 +166,6 @@ class NVRCore:
         self.worker_thread = None
 
     def _update_ui(self, lList1):
-        # 更新表格的UI操作
         lList = []
         for ll in lList1:
             if ll not in lList:
@@ -192,22 +188,18 @@ class NVRCore:
             table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
 
     def _handle_data_ready(self, lList1, rList):
-        # 处理数据准备完成的回调
         self._update_ui(lList1)
         self._view.button.setText(f"于 {getCurrentTime()} 生成完成，点击可以进行下一次生成")
         self._view.button.setEnabled(True)
 
     def DisplayTable(self, button):
-        # 第一步：立即更新按钮状态
         button.setText("正在生成数据，请稍候...")
         button.setEnabled(False)
 
-        # 初始化或获取核心对象
         if not hasattr(self, '_core'):
             type, depth = self._view._getParams()
             self._core = NVREvaluate(StreamerList, type, depth)
 
-        # 创建并启动工作线程
         self.worker_thread = WorkerThread(self._core)
         self.worker_thread.data_ready.connect(self._handle_data_ready)
         self.worker_thread.finished.connect(lambda: self.worker_thread.deleteLater())
