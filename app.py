@@ -141,25 +141,40 @@ def getCurrentTime():
     return time.strftime("%H:%M:%S", local_time)
 
 
+from PyQt6.QtCore import QThread, pyqtSignal
+
+class WorkerThread(QThread):
+    # 定义信号用于传递生成的数据
+    data_ready = pyqtSignal(list, list)
+    finished = pyqtSignal()
+
+    def __init__(self, core):
+        super().__init__()
+        self.core = core
+        self.lList1 = []
+        self.rList = []
+
+    def run(self):
+        # 执行耗时操作
+        self.core.generateInfoList(self.lList1, self.rList)
+        # 发送生成的数据
+        self.data_ready.emit(self.lList1, self.rList)
+        self.finished.emit()
+
+
 class NVRCore:
     def __init__(self, view):
         self._view = view
         self._connectButtonAndSlots()
+        self.worker_thread = None
 
-    def DisplayTable(self, button):
-        if hasattr(self, '_core'):
-            core = self._core
-        else:
-            type, depth = self._view._getParams()
-            self._core = NVREvaluate(StreamerList, type, depth)
-            core = self._core
-        lList1 = []
-        rList = []
-        core.generateInfoList(lList1, rList)
+    def _update_ui(self, lList1):
+        # 更新表格的UI操作
         lList = []
         for ll in lList1:
             if ll not in lList:
                 lList.append(ll)
+
         table = self._view.table
         table.clearContents()
         table.setColumnCount(5)
@@ -167,18 +182,39 @@ class NVRCore:
         table.setItemDelegateForColumn(4, hyperlink_delagate)
         table.setRowCount(len(lList))
         table.setHorizontalHeaderLabels(["名字", "标题", "UID", "直播间号", "直播间地址"])
+
         hyperlink = "https://live.bilibili.com/"
         for row in range(len(lList)):
             for col in range(4):
                 item = QTableWidgetItem(str(lList[row][col]))
-                item.setFlags(item.flags() and ~Qt.ItemFlag.ItemIsEditable)
+                item.setFlags(item.flags() & ~Qt.ItemFlag.ItemIsEditable)
                 table.setItem(row, col, item)
             table.setItem(row, 4, QTableWidgetItem(hyperlink + str(lList[row][3])))
-        button.setText(f"于 {getCurrentTime()} 生成完成，点击可以进行下一次生成")
+
+    def _handle_data_ready(self, lList1, rList):
+        # 处理数据准备完成的回调
+        self._update_ui(lList1)
+        self._view.button.setText(f"于 {getCurrentTime()} 生成完成，点击可以进行下一次生成")
+        self._view.button.setEnabled(True)
+
+    def DisplayTable(self, button):
+        # 第一步：立即更新按钮状态
+        button.setText("正在生成数据，请稍候...")
+        button.setEnabled(False)
+
+        # 初始化或获取核心对象
+        if not hasattr(self, '_core'):
+            type, depth = self._view._getParams()
+            self._core = NVREvaluate(StreamerList, type, depth)
+
+        # 创建并启动工作线程
+        self.worker_thread = WorkerThread(self._core)
+        self.worker_thread.data_ready.connect(self._handle_data_ready)
+        self.worker_thread.finished.connect(lambda: self.worker_thread.deleteLater())
+        self.worker_thread.start()
 
     def _connectButtonAndSlots(self):
         self._view.button.clicked.connect(partial(self.DisplayTable, self._view.button))
-
         # self._view.upperCorner["button"].clicked.connect(partial(self.DisplayTable))
 
 
