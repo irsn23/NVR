@@ -1,32 +1,35 @@
-from app import StreamerList, isRoomIdStream, getHTMLList, parsePage, UidList
+from app import generateHTMLList, AreaId, asyncio, parseList, StreamerList, isRoomIdStream, getHTMLList, parsePage,UidList
 
-
+areaList = AreaId
+Depth = 200
 def printInfoList(info):
     for inf in info:
         print(inf)
 
 
 if __name__ == "__main__":
-    lList = []
-    rList = []
-    TYPE = "1.1"
-    if TYPE == "3":
-        for jj in range(len(StreamerList)):
+    LiveList = []
+    ReplayList = []
+    Type = "并行"
+    if Type == "并行":
+        HTMLList = generateHTMLList(areaList, Depth)
+        asyncio.run(parseList(LiveList, HTMLList))
+    elif Type == "穷举":
+        for streamer in StreamerList:
             try:
-                isRoomIdStream(StreamerList[jj], lList, rList)
+                isRoomIdStream(streamer, LiveList, ReplayList)
             except:
-                print("")
-    elif TYPE == "1.1":
-        j = 1
-        while True:
-            # url = ("https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=9"
-            #        "&area_id=0&sort_type=sort_type_291&page=") + str(j)
-            url = ("https://api.live.bilibili.com/xlive/web-interface/v1/second/getList?platform=web&parent_area_id=5"
-                   "&area_id=0&sort_type=sort_type_225&page=")+str(j)
-            html = getHTMLList(url)
-            if 0 < len(html) < 100:
-                break
-            else:
-                j += 1
-            parsePage(html, lList, UidList)
-    printInfoList(lList)
+                print("ERROR")
+    else:
+        HTMLList = generateHTMLList(areaList, Depth)
+        for ind in range(len(areaList)):
+            j = 0
+            while True:
+                url = HTMLList[j + ind * Depth]
+                html = getHTMLList(url)
+                if 0 < len(html) < 100:
+                    break
+                else:
+                    j += 1
+                parsePage(html, LiveList, UidList)
+    printInfoList(LiveList)
