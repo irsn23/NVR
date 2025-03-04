@@ -1,7 +1,10 @@
-from app import generateHTMLList, AreaId, asyncio, parseList, StreamerList, isRoomIdStream, getHTMLList, parsePage,UidList
+from app import generateHTMLList, AreaId, asyncio, parseList, StreamerList, isRoomIdStream, getHTMLList, parsePage, \
+    UidList
 
 areaList = AreaId
 Depth = 200
+
+
 def printInfoList(info):
     for inf in info:
         print(inf)
