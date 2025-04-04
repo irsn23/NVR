@@ -21,15 +21,14 @@ file_path = os.path.join(base_path, 'data.csv')
 with open(file_path, 'r', encoding='gbk') as file:
     reader = csv.reader(file)
     rows = list(reader)
-    AreaId = rows[1][1:]
-    header = rows[3]
+    header = rows[0]
     num_columns = len(header)
     StreamerList = []
     NameList = []
     UidList = []
     RoomIdList = []
-    for row in rows[4:]:
-        if any(row):
+    for row in rows[1:]:
+        if all(row):
             name, uid, roomid = row
             StreamerList.append(Streamer(name, uid, roomid))
             NameList.append(name)

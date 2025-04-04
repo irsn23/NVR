@@ -4,7 +4,207 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa7a5566-515a-44d3-a6f7-d29d15a69326" name="Changes" comment="minimum package" />
+    <list default="true" id="fa7a5566-515a-44d3-a6f7-d29d15a69326" name="Changes" comment="minimum package">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/LIBBZ2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/MSVCP140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/MSVCP140_2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/MSVCP140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/MSVCP140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/MSVCP140_2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Gui.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Network.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Pdf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Svg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/Qt6Widgets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/VCRUNTIME140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/VCRUNTIME140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/bin/opengl32sw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/generic/qtuiotouchplugin.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/iconengines/qsvgicon.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qgif.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qicns.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qico.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qjpeg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qpdf.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qsvg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qtga.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qtiff.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qwbmp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/imageformats/qwebp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/platforms/qminimal.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/platforms/qoffscreen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/platforms/qwindows.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/plugins/styles/qwindowsvistastyle.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_ar.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_bg.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_ca.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_cs.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_da.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_de.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_en.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_es.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_fa.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_fi.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_fr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_gd.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_gl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_he.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_ar.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_bg.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_ca.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_cs.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_da.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_de.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_en.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_es.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_fr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_gl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_hr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_hu.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_it.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_ja.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_ko.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_nl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_nn.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_pl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_pt_BR.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_ru.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_sk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_sl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_tr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_uk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_zh_CN.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_help_zh_TW.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_hr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_hu.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_it.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_ja.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_ko.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_lt.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_lv.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_nl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_nn.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_pl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_pt_BR.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_pt_PT.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_ru.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_sk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_sl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_sv.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_tr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_uk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_zh_CN.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qt_zh_TW.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_ar.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_bg.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_ca.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_cs.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_da.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_de.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_en.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_es.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_fa.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_fi.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_fr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_gd.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_he.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_hr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_hu.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_it.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_ja.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_ko.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_lv.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_nl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_nn.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_pl.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_pt_BR.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_ru.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_sk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_tr.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_uk.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_zh_CN.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/Qt6/translations/qtbase_zh_TW.qm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/QtCore.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/QtGui.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/QtWidgets.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/PyQt6/sip.cp311-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/VCRUNTIME140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/VCRUNTIME140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_asyncio.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_bz2.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_ctypes.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_decimal.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_hashlib.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_lzma.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_multiprocessing.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_overlapped.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_queue.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_socket.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/_ssl.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/certifi/cacert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/certifi/py.typed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/charset_normalizer/md.cp311-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/charset_normalizer/md__mypyc.cp311-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/ffi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/libcrypto-3-x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/liblzma.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/libssl-3-x64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/pyexpat.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/python3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/python311.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/select.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/unicodedata.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/_internal/zlib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app/app.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/local.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,16 +251,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;J:/py&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "ir23/test",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "J:/py",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="J:\NVR" />
@@ -299,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741069734696</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="minimum package">
+      <option name="closed" value="true" />
+      <created>1743754998128</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1743754998128</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
